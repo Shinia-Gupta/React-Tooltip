@@ -1,0 +1,122 @@
+/* initially before hovering on the trigger, tooltip will be hidden  */
+.tooltip-trigger .tooltip {
+    opacity: 0;
+}
+
+.tooltip-trigger:hover .tooltip {
+    opacity: 1;
+}
+
+.tooltip-trigger {
+    position: relative;
+    display: inline;
+    background-color: black;
+    color: yellowgreen;
+    border-radius: 10px;
+    padding: 5px;
+
+
+    box-sizing: border-box;
+}
+
+.tooltip-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tooltip-trigger .tooltip {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    z-index: 1;
+    max-width: 150px;
+}
+
+.tooltip-right {
+    top: -15px;
+    left: 105%;
+}
+
+
+.tooltip-left {
+    top: -15px;
+    right: 105%;
+}
+
+.tooltip-top {
+    bottom: 105%;
+    left: 0%;
+}
+
+.tooltip-bottom {
+    top: 105%;
+    left: 0%;
+}
+
+
+.tooltip-trigger .tooltip-top::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 90%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip-trigger .tooltip-bottom::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 90%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip-trigger .tooltip-left::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-right: -20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+.tooltip-trigger .tooltip-right::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.tippy-button {
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .tooltip-trigger .tooltip {
+        max-width: 120%;
+    }
+}
