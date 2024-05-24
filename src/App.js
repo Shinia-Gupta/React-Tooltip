@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import TippyTooltip from "./tooltip/TippyTooltip";
 import Tooltip from "./tooltip/Tooltip";
+import Navbar from "./components/Navbar";
 
 function App() {
   // State to control the visibility of the Tippy tooltip
@@ -13,6 +14,8 @@ function App() {
   };
 
   return (
+    <>
+      <Navbar/>
     <div className="App">
       {/* Four Tooltip components with different positions */}
       <Tooltip position={"right"} />
@@ -43,6 +46,7 @@ function App() {
         theme={"material"}
       />
     </div>
+    </>
   );
 }
 

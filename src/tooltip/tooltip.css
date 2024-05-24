@@ -115,6 +115,15 @@
     margin: 5%;
 }
 
+.navbar{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: darkblue;
+    background-color: cadetblue;
+    padding: 10px;
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
     .tooltip-trigger .tooltip {
         max-width: 120%;
